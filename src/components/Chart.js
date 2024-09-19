@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(
@@ -16,7 +17,8 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
 const Chart = ({ data, indexAxis }) => {
@@ -26,14 +28,20 @@ const Chart = ({ data, indexAxis }) => {
       legend: {
         position: 'top',
       },
+      datalabels: {
+        color: 'gray',
+        anchor: 'end',
+        align: 'right',
+        formatter: Math.round,
+        font: {
+          weight: 'bold'
+        }
+      },
       title: {
         display: false
       },
     },
-    indexAxis: indexAxis || 'y',
-    legend: {
-      display: true,
-    }
+    indexAxis: indexAxis || 'y'
   };
 
   return (
