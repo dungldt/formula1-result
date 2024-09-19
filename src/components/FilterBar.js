@@ -41,7 +41,6 @@ const FilterBar = ({
       case "year":
         setYear(value);
         setRecord('all');
-        setType('races');
         break;
       case "type":
         setType(value);

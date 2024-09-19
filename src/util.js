@@ -53,3 +53,27 @@ export const getColumnsDataTableFromResultList = (dataList) => {
 
     return columns;
 }
+
+export const getDriversPTSDataForChart = (data) => {
+    let datasets = [
+        {
+            label: 'PTS',
+            data: data.map(item => item.PTS),
+            backgroundColor: dynamicColors(),
+        }
+    ];
+    const result = {
+        labels: data.map(item => item.Driver),
+        datasets: datasets
+    };
+
+    return result;
+};
+
+const dynamicColors = () => {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
