@@ -16,7 +16,6 @@ export const getRecords = (allData, year, type) => {
 };
 
 export const filter = (allData, year, type, record) => {
-    console.log(year, type, record);
     let dataOfYear = allData[year];
     if (!dataOfYear) {
         return [];
@@ -29,9 +28,28 @@ export const filter = (allData, year, type, record) => {
         }
         return true;
     });
+    let result = [];
     if (dataOfType[record] !== undefined) {
-        return dataOfType[record];
+        let data = dataOfType[record];
+        result = data.hasOwnProperty('values') ? data['values'] : data;
     }
 
-    return [];
+    return result;
 };
+
+export const getColumnsDataTableFromResultList = (dataList) => {
+    if (dataList.length < 1) {
+        return [];
+    }
+    let keys = Object.keys(dataList[0]);
+    let columns = keys.map(k => {
+        return {
+            text: k.replace('_', ' '),
+            dataField: k,
+            sort: true,
+            hidden: k === 'id'
+        };
+    });
+
+    return columns;
+}
