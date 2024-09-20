@@ -70,6 +70,54 @@ export const getDriversPTSDataForChart = (data) => {
     return result;
 };
 
+export const getDriverPTSDataForChart = (data) => {
+    let datasets = [
+        {
+            label: 'PTS',
+            data: data.map(item => item.PTS),
+            backgroundColor: dynamicColors(),
+        }
+    ];
+    const result = {
+        labels: data.map(item => item.Grand_Prix),
+        datasets: datasets
+    };
+
+    return result;
+};
+
+export const getTeamsPTSDataForChart = (data) => {
+    let datasets = [
+        {
+            label: 'PTS',
+            data: data.map(item => item.PTS),
+            backgroundColor: dynamicColors(),
+        }
+    ];
+    const result = {
+        labels: data.map(item => item.Team),
+        datasets: datasets
+    };
+
+    return result;
+};
+
+export const getTeamPTSDataForChart = (data) => {
+    let datasets = [
+        {
+            label: 'PTS',
+            data: data.map(item => item.PTS),
+            backgroundColor: dynamicColors(),
+        }
+    ];
+    const result = {
+        labels: data.map(item => item.Grand_Prix),
+        datasets: datasets
+    };
+
+    return result;
+};
+
 const dynamicColors = () => {
     let r = Math.floor(Math.random() * 255);
     let g = Math.floor(Math.random() * 255);
