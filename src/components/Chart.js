@@ -21,7 +21,7 @@ ChartJS.register(
   ChartDataLabels
 );
 
-const Chart = ({ data, indexAxis }) => {
+const Chart = ({ data, indexAxis, datalabelsAlign }) => {
   const options = {
     responsive: true,
     plugins: {
@@ -31,7 +31,7 @@ const Chart = ({ data, indexAxis }) => {
       datalabels: {
         color: 'gray',
         anchor: 'end',
-        align: 'right',
+        align: datalabelsAlign || 'right',
         formatter: Math.round,
         font: {
           weight: 'bold'

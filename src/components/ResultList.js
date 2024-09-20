@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import BootstrapTable from 'react-bootstrap-table-next';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit';
-import AllDriversChart from './AllDriversChart';
+import DriversChart from './DriversChart';
+import TeamsChart from './TeamsChart';
 import { getColumnsDataTableFromResultList } from '../util';
 
 const ResultList = ({ list, year, type, record }) => {
@@ -16,7 +17,8 @@ const ResultList = ({ list, year, type, record }) => {
     <div>
       {columns.length > 0 ? (
         <>
-          {type === 'drivers' && record === 'all' ? (<AllDriversChart list={list} year={year} />) : ''}
+          {type === 'drivers' ? (<DriversChart list={list} year={year} record={record} />) : ''}
+          {type === 'team' ? (<TeamsChart list={list} year={year} record={record} />) : ''}
           <ToolkitProvider
             keyField="id"
             data={list}
