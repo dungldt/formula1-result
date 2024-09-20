@@ -62,10 +62,3 @@ If port `3000` is occupied, it will run on another available port, which will be
 ## Feedback & Contributions
 
 Feel free to reach out if you have any questions, feedback, or contributions! You can contact me via email at **bbmcode247@gmail.com**.
-
-Looking forward to your input!
-
----
-
-### Best regards,  
-**BBM Code**
