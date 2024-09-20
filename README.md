@@ -1,8 +1,6 @@
-Here's an improved version of your `README.md`:
-
----
 
 # F1 Racing Results Webpage
+[![Build an F1 Racing Results Webpage with ReactJS](https://i.ibb.co/Vx1Q0zR/youtube-thumb-f1.png)](https://www.youtube.com/watch?v=kJDtKnbSqBs)
 
 This project is a dynamic webpage that fetches and displays content from the [Formula 1 official website](https://formula1.com), showcasing the latest race results.
 
@@ -71,5 +69,3 @@ Looking forward to your input!
 
 ### Best regards,  
 **BBM Code**
-
----
