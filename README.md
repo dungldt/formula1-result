@@ -1,6 +1,7 @@
 
 # Fomular 1 Results Webpage
 Build an Fomular 1 Racing Results Webpage with ReactJS
+![Fomular 1 Racing Results](docs/images/f1_result.png)
 
 This project is a dynamic webpage that fetches and displays content from the [Formula 1 official website](https://formula1.com), showcasing the latest race results.
 
