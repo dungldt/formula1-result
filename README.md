@@ -26,11 +26,7 @@ Follow these steps to get the project running locally.
 
 ### 1. Fork the Repository
 
-You can fork the repository using the following link:
-
-```bash
-https://github.com/dungldt/formula1-result.git
-```
+You can fork this repository
 
 ### 2. Install Dependencies
 
